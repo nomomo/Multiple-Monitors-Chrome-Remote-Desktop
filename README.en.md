@@ -20,8 +20,8 @@ If browsers could expand to span multiple monitors, then Chrome Remote Desktop w
 - Link to the download page: <https://github.com/nomomo/Multiple-Monitors-Chrome-Remote-Desktop/releases>
 - Unzip the downloaded zip file.
 - Run *Multiple-Monitors-Chrome-Remote-Desktop.exe*. **Windows Defender or antivirus program may block the app because it is not digitally signed. For antivirus programs, add the downloaded file to an exception; for Windows Depender, click "More info" and then click the Run button.**
-- Running the exe file will launch Chrome Remote Desktop across all monitors.
-- To use keyboard shortcuts in Chrome Remote Desktop, such as Alt+Tab or Alt+F4, press the (>) button on the right after connecting remotely to open the menu, then click "Fullscreen".
+- When you run the exe file, the browser opens across all monitors and connects to the Chrome Remote Desktop access page <https://remotedesktop.google.com/access>.
+- To use keyboard shortcuts in Chrome Remote Desktop, such as Alt+Tab or Alt+F4, press the (>) button on the right after connecting remotely to open the menu, then click "Fullscreen". It may feel like nothing has changed, but if you press Alt+Tab, you should see the shortcut working within Remote Desktop.
 - To quit the app, press Disconnect from the menu after connecting remotely, then press Alt+F4 to exit while the remote connection is closed.
 
 ## User settings
@@ -82,7 +82,7 @@ Example:
 
 - If your current PC uses three 1920x1080 resolution monitors, and the PC you're remotely accessing uses two 1920x1080 resolution monitors: Enter 3840 for manualWidth to launch the app to cover the two monitors on your current PC. The app's launch position is determined based on the "primary monitor". If the app doesn't launch on the desired monitor, enter -1920 for manualPosX to move the app to the left monitor, or 1920 to move the app to the right monitor.
 
-### I have three monitors in a G-shape and the window size is weird.
+### I have three monitors in a ㄱ-shape and the window size is weird
 
 This is because the app assumes that all monitors are positioned horizontally. You need to set autoSizePos to false and manually specify the app size and start position.
 
