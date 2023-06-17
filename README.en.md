@@ -19,7 +19,7 @@ If browsers could expand to span multiple monitors, then Chrome Remote Desktop w
 - Download *Multiple-Monitors-Chrome-Remote-Desktop.x.x.x.zip* from the following link, where *x.x.x* corresponds to the app version. **Chrome browser may block the download of the file. Click the "Continue" button to download it.**
 - Link to the download page: <https://github.com/nomomo/Multiple-Monitors-Chrome-Remote-Desktop/releases>
 - Unzip the downloaded zip file.
-- Run *Multiple-Monitors-Chrome-Remote-Desktop.exe*. **Windows Defender or antivirus program may block the app because it is not digitally signed. For antivirus programs, add the downloaded file to an exception; for Windows Depender, click "More info" and then click the Run button.**
+- Run *Multiple-Monitors-Chrome-Remote-Desktop.exe*. **Windows Defender or antivirus program may block the app because it is not digitally signed. For antivirus programs, add the downloaded file to an exception; for Windows Defender, click "More info" and then click the Run button.**
 - When you run the exe file, the browser opens across all monitors and connects to the Chrome Remote Desktop access page <https://remotedesktop.google.com/access>.
 - To use keyboard shortcuts in Chrome Remote Desktop, such as Alt+Tab or Alt+F4, press the (>) button on the right after connecting remotely to open the menu, then click "Fullscreen". It may feel like nothing has changed, but if you press Alt+Tab, you should see the shortcut working within Remote Desktop.
 - To quit the app, press Disconnect from the menu after connecting remotely, then press Alt+F4 to exit while the remote connection is closed.
