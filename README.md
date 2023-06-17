@@ -98,6 +98,23 @@ settings.json 파일의 autoSizePos 를 false 로 설정하고, manualWidth 를 
 - 3840x2160 해상도 모니터를 125% 배율로 사용하는 경우 실제 앱이 인식하는 모니터 해상도는 (3840/1.25)x(2160/1.25)=3072x1728 입니다.
 - 만약 3840x2160 해상도 모니터 두 대를 가로로 배치하여 125% 배율로 사용하고 주 모니터가 오른쪽 모니터인 경우, 모든 모니터를 커버하도록 앱을 실행하려면 manualWidth 에 6144, manualHeight 에 1728, manualPosX 에 -3072, manualPosY 에 0 을 입력하면 됩니다.
 
+### 앱을 실행하면 왜 Google 로그인을 요구하나요?
+
+- 앱을 실행하면 Chrome Remote Desktop 페이지(<https://remotedesktop.google.com/access>)로 연결됩니다. Chrome Remote Desktop 을 사용하려면 Google에 로그인 해야합니다.
+
+### 다운받은 exe 파일을 실행시키기 찜찜해요
+
+- Node.js를 사용할 줄 안다면 다음을 따라 직접 빌드하세요.
+```bash
+$ git clone https://github.com/nomomo/Multiple-Monitors-Chrome-Remote-Desktop.git
+$ npm install
+$ npm run build
+```
+
 ## License
 
 MIT
+
+## Happy??
+
+<a href="https://www.buymeacoffee.com/nomomo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="60"></a>

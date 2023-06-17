@@ -100,6 +100,23 @@ Example:
 - If you are using a 3840x2160 resolution monitor at 125% scaling, the actual monitor resolution that the app recognizes is (3840/1.25)x(2160/1.25)=3072x1728.
 - If you have two 3840x2160 resolution monitors laid out horizontally at 125% scaling and your primary monitor is the right monitor, you can run the app to cover all monitors by entering 6144 for manualWidth, 1728 for manualHeight, -3072 for manualPosX, and 0 for manualPosY.
 
+### Why does the app ask me to sign in with Google?
+
+- When you run the app, you are directed to the Chrome Remote Desktop page (<https://remotedesktop.google.com/access>). You need to be signed in to Google to use Chrome Remote Desktop.
+
+### I'm afraid I'll get hacked if I run the exe file...ugh.
+
+- If you know how to use Node.js, follow these steps to build it yourself
+```bash
+$ git clone https://github.com/nomomo/Multiple-Monitors-Chrome-Remote-Desktop.git
+$ npm install
+$ npm run build
+```
+
 ## License
 
 MIT
+
+## Happy??
+
+<a href="https://www.buymeacoffee.com/nomomo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="60"></a>
