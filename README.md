@@ -18,9 +18,9 @@ Chrome Remote Desktop 은 브라우저에서 사용 가능한 원격 데스크�
 - 다운로드 페이지 링크: <https://github.com/nomomo/Multiple-Monitors-Chrome-Remote-Desktop/releases>
 - 다운로드 받은 zip 파일의 압축을 해제합니다.
 - *Multiple-Monitors-Chrome-Remote-Desktop.exe* 을 실행합니다. **이 때 본 앱에 디지털 서명이 되어있지 않아 Windows Defender 또는 백신 프로그램이 앱의 실행을 차단할 수 있습니다. 백신 프로그램의 경우 다운로드 받은 파일을 예외에 추가하고, Windows Depender 의 경우 "추가 정보" 를 누른 후 실행 버튼을 눌러 실행하세요.**
-- exe 파일을 실행하면 Chrome Remote Desktop 이 모든 모니터에 걸쳐 실행됩니다.
-- Chrome Remote Desktop 에서 Alt+Tab, Alt+F4 등의 단축키를 사용하려면 원격 접속 후 우측의 (>) 버튼을 눌러 메뉴를 연 후 "전체화면"을 클릭하세요.
-- 앱을 종료하기 위해서는 원격 접속 후 메뉴에서 연결 끊기를 눌러 원격 접속이 종료된 상태에서 Alt+F4 를 눌러 종료하세요.
+- exe 파일을 실행하면 브라우저가 모든 모니터에 걸쳐 실행되며, Chrome Remote Desktop 접속 페이지<https://remotedesktop.google.com/access>로 연결됩니다.
+- Chrome Remote Desktop 에서 Alt+Tab, Alt+F4 등의 단축키를 사용하려면 원격 접속 후 우측의 (>) 버튼을 눌러 메뉴를 연 후 "전체화면"을 클릭하세요. 아무 변화가 없는 것처럼 느껴지겠지만, Alt+Tab 을 눌러보면 Remote Desktop 내에서 단축키가 동작하는 것을 확인할 수 있을 것입니다.
+- 앱을 종료하기 위해서는 원격 접속 후 메뉴에서 "연결 해제"를 눌러 원격 접속이 종료된 상태에서 Alt+F4 를 눌러 종료하세요.
 
 ## 사용자 설정
 
