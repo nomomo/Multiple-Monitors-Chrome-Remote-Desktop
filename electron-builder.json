@@ -1,7 +1,9 @@
 {
     "productName":"Multiple-Monitors-Chrome-Remote-Desktop",
     "appId": "com.nomo.crdelectonapp",
-    "asar": true,
+    "portable": {                
+        "unpackDirName": "Multiple-Monitors-Chrome-Remote-Desktop"
+    },
     "directories": {
         "buildResources":"assets",
         "output": "dist"
@@ -11,7 +13,8 @@
         "./assets/**/*"
     ],
     "win": {
-        "target": "portable",
+        "artifactName": "${productName}.${version}.${ext}",
+        "target": "zip",
         "icon": "./assets/icons/icon.ico"
     }
 }

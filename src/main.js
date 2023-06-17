@@ -3,11 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const { app, BrowserWindow, screen, globalShortcut, dialog } = require('electron');
 
-// Get the directory where the current executable is located
-const executablePath = path.dirname(process.execPath);
-
-// Construct the path to the settings file
-const settingsFilePath = path.join(executablePath, 'settings.json');
+////////////////////////////////////////////////////////////
+// DEBUG
+var DEBUG = false;
 
 // user settings
 var userSettingsFromFile = {};
@@ -22,46 +20,6 @@ var userSettings = {
     manualPosX: 0,
     manualPosY: 0
 };
-
-// Check if the settings file exists
-if (fs.existsSync(settingsFilePath)) {
-    // Read the contents of the settings file
-    const fileData = fs.readFileSync(settingsFilePath, 'utf8');
-
-    // Parse the JSON data
-    try {
-        // read file
-        userSettingsFromFile = JSON.parse(fileData);
-
-        let thereIsNewOption = false;
-        // copy settings
-        for(let key in userSettings){
-            if(userSettingsFromFile[key] !== undefined){
-                userSettings[key] = userSettingsFromFile[key];
-            }
-            else{
-                thereIsNewOption = true;
-            }
-        }
-
-        // if there is new option, re-write settings.json file
-        if(thereIsNewOption){
-            console.log("new options. re-write settings.json file");
-            fs.writeFileSync(settingsFilePath, JSON.stringify(userSettings, null, 2));
-        }
-    } catch (error) {
-        console.error('Error parsing settings file:', error);
-    }
-
-} else {
-    // Write the default settings to the settings.json file
-    try {
-        console.log("write settings.json file");
-        fs.writeFileSync(settingsFilePath, JSON.stringify(userSettings, null, 2));
-    } catch (error) {
-        console.error('Error creating settings file:', error);
-    }
-}
 
 // create window
 const createWindow = (x, y, width, height) => {
@@ -89,12 +47,69 @@ const createWindow = (x, y, width, height) => {
     // set icon on taskbar
     win.setIcon(path.join(__dirname, '../assets/icons/icon.ico'));
 
+    if(DEBUG){
+        mainWindow.webContents.openDevTools();
+    }
+
     // return
     return win;
 };
 
 // app ready
 app.whenReady().then(() => {
+    
+    // Get the directory where the current executable is located
+    const executablePath = path.dirname(process.execPath);
+    //const executablePath = app.getAppPath("exe");
+
+    // Construct the path to the settings file
+    const settingsFilePath = path.join(executablePath, 'settings.json');
+
+    console.log("executablePath", executablePath);
+    console.log("settingsFilePath", settingsFilePath);
+    
+    // Check if the settings file exists
+    if (fs.existsSync(settingsFilePath)) {
+        // Read the contents of the settings file
+        const fileData = fs.readFileSync(settingsFilePath, 'utf8');
+
+        // Parse the JSON data
+        try {
+            // read file
+            userSettingsFromFile = JSON.parse(fileData);
+
+            let thereIsNewOption = false;
+            // copy settings
+            for(let key in userSettings){
+                if(userSettingsFromFile[key] !== undefined){
+                    userSettings[key] = userSettingsFromFile[key];
+                }
+                else{
+                    thereIsNewOption = true;
+                }
+            }
+
+            // if there is new option, re-write settings.json file
+            if(thereIsNewOption){
+                console.log("new options. re-write settings.json file");
+                fs.writeFileSync(settingsFilePath, JSON.stringify(userSettings, null, 2));
+            }
+            
+        } catch (error) {
+            console.error('Error parsing settings file:', error);
+        }
+
+    } else {
+        // Write the default settings to the settings.json file
+        try {
+            console.log("write settings.json file");
+            fs.writeFileSync(settingsFilePath, JSON.stringify(userSettings, null, 2));
+        } catch (error) {
+            console.error('Error creating settings file:', error);
+        }
+    }
+
+
     let win;
     let winWidth, winHeight, winPosX, winPosY;
 

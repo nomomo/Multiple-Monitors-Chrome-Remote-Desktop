@@ -7,7 +7,7 @@
     "start": "electron .",
     "build": "electron-builder"
   },
-  "author": "NOMO",
+  "author": "Nomo",
   "license": "MIT",
   "devDependencies": {
     "electron": "^25.1.1",
