@@ -57,30 +57,30 @@ For the default settings, the app automatically determines the size and launch p
 
 Example:
 
-- If Left: 1920x1080, Right: 1920x1080, the app opens at 3840x1080, centered on the top left of the leftmost monitor.
-- If left: 1920x1080, right: 1080x1920 (pivoted monitors), the app opens at 3000x1080, centered on the top left of the leftmost monitor.
+- If the left monitor has a resolution of 1920x1080 and the right monitor has a resolution of 1920x1080: The app opens at 3840x1080 from the top-left corner of the leftmost monitor.
+- If the left monitor has a 1920x1080 resolution and the right monitor has a 1080x1920 (pivoted monitor) resolution: The app opens at 3000x1080 from the top-left corner of the leftmost monitor.
 - If you have three 1920x1080 monitors arranged horizontally, the app will open at 5760x1080, centered on the top left of the leftmost monitor.
 
 ### My app opens at a weird size in a weird place
 
-Manually specify the app's start position and size by setting autoSizePos in the settings.json file to false and entering the manualWidth, manualHeight, manualPosX, and manualPosY values manually.
+Manually specify the app's start position and size by setting autoSizePos in the settings.json file to false and entering the `manualWidth`, `manualHeight`, `manualPosX`, and `manualPosY` values manually.
 
-### How should I enter manualPosX and manualPosY when manually entering the app's start position?
+### How should I enter `manualPosX` and `manualPosY` when manually entering the app's start position?
 
-The top left corner of the monitor set as "Primary Monitor" in the OS's display settings is the starting position of the app when both manualPosX and manualPosY values are 0.
+The top left corner of the monitor set as "Primary Monitor" in the OS's display settings is the starting position of the app when both `manualPosX` and `manualPosY` values are 0.
 
 Example:
 
-- If you have two 1920x1080 monitors and your primary monitor is the left monitor, you can enter 0 for manualWidth to have the window open on the left monitor.
-- If you have two 1920x1080 monitors and your primary monitor is the right monitor, you can enter -1920 for manualWidth to have the window open on the left monitor.
+- If you have two 1920x1080 monitors and your primary monitor is the left monitor, you can enter 0 for `manualWidth` to have the window open on the left monitor.
+- If you have two 1920x1080 monitors and your primary monitor is the right monitor, you can enter -1920 for `manualWidth` to have the window open on the left monitor.
 
 ### I currently have a triple monitor, but the PC I'm trying to remotely access has a dual monitor
 
-Set autoSizePos to false in your settings.json file, and set manualWidth to the resolution of the PC you're remotely accessing.
+Set autoSizePos to false in your settings.json file, and set `manualWidth` to the resolution of the PC you're remotely accessing.
 
 Example:
 
-- If your current PC uses three 1920x1080 resolution monitors, and the PC you're remotely accessing uses two 1920x1080 resolution monitors: Enter 3840 for manualWidth to launch the app to cover the two monitors on your current PC. The app's launch position is determined based on the "primary monitor". If the app doesn't launch on the desired monitor, enter -1920 for manualPosX to move the app to the left monitor, or 1920 to move the app to the right monitor.
+- If your current PC uses three 1920x1080 resolution monitors, and the PC you're remotely accessing uses two 1920x1080 resolution monitors: Enter 3840 for `manualWidth` to launch the app to cover the two monitors on your current PC. The app's launch position is determined based on the "primary monitor". If the app doesn't launch on the desired monitor, enter -1920 for `manualPosX` to move the app to the left monitor, or 1920 to move the app to the right monitor.
 
 ### I have three monitors in a ㄱ-shape and the window size is weird
 
@@ -89,8 +89,8 @@ This is because the app assumes that all monitors are positioned horizontally. Y
 Example:
 
 - If you have three 1920x1080 monitors arranged in an A-shape, the app will open at 5760x1080 with the top left corner of the leftmost monitor.
-- If you wanted the window to open at 3840x1080, you would set autoSizePos to false and specify manualWidth to 3840 and manualHeight to 1080.
-- The starting position of the monitors is determined relative to the "primary monitor", so set the manualPosX and manualPosY values accordingly, or set the top left monitor as the "primary monitor".
+- If you wanted the window to open at 3840x1080, you would set autoSizePos to false and specify `manualWidth` to 3840 and `manualHeight` to 1080.
+- The starting position of the monitors is determined relative to the "primary monitor", so set the `manualPosX` and `manualPosY` values accordingly, or set the top left monitor as the "primary monitor".
 
 ### What about manual input when my monitor is not scaled to 100%?
 
@@ -99,7 +99,7 @@ If you are using a high-resolution monitor and the resolution scale is not 100%,
 Example:
 
 - If you are using a 3840x2160 resolution monitor at 125% scaling, the actual monitor resolution that the app recognizes is (3840/1.25)x(2160/1.25)=3072x1728.
-- If you have two 3840x2160 resolution monitors laid out horizontally at 125% scaling and your primary monitor is the right monitor, you can run the app to cover all monitors by entering 6144 for manualWidth, 1728 for manualHeight, -3072 for manualPosX, and 0 for manualPosY.
+- If you have two 3840x2160 resolution monitors laid out horizontally at 125% scaling and your primary monitor is the right monitor, you can run the app to cover all monitors by entering 6144 for `manualWidth`, 1728 for `manualHeight`, -3072 for `manualPosX`, and 0 for `manualPosY`.
 
 ### Why does the app ask me to sign in with Google?
 
