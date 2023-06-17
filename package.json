@@ -1,0 +1,17 @@
+{
+  "name": "multiple-monitors-chrome-remote-desktop",
+  "version": "0.0.1",
+  "description": "A simple browser app based on Electron that allows Chrome Remote Desktop to run across multiple monitors.",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "NOMO",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.1.1",
+    "electron-builder": "^24.4.0",
+    "electron-localshortcut": "^3.2.1"
+  }
+}

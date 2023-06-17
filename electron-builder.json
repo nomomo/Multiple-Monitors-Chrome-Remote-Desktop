@@ -1,0 +1,17 @@
+{
+    "productName":"Multiple-Monitors-Chrome-Remote-Desktop",
+    "appId": "com.nomo.crdelectonapp",
+    "asar": true,
+    "directories": {
+        "buildResources":"assets",
+        "output": "dist"
+    },
+    "files": [
+        "./src/*",
+        "./assets/**/*"
+    ],
+    "win": {
+        "target": "portable",
+        "icon": "./assets/icons/icon.ico"
+    }
+}
